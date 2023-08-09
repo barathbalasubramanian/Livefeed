@@ -12,7 +12,7 @@ const videoFrame = document.querySelector("#videoFrame");
 const ws = new WebSocket('ws://localhost:8080');
 
 ws.onmessage = function (event) {
-    videoFrame.src = event.data;
+    // videoFrame.src = event.data;
 };
 </script>
 
