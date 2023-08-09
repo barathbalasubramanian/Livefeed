@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Live Video Stream</h1>
+
+<img id="videoFrame">
+
+<script>
+const videoFrame = document.querySelector("#videoFrame");
+
+const ws = new WebSocket('ws://localhost:8080');
+
+ws.onmessage = function (event) {
+    videoFrame.src = event.data;
+};
+</script>
+
+</body>
+</html>
